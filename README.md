@@ -31,3 +31,20 @@ function mystery(n) {
 Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 might help with the notation for mathematical expressions.
+
+**Recurence Relation:**
+
+T($n$)= 
+- $1$, if $n$ $<=$ 1
+-  $2$T($n/3$) + $O$($n$<sup>6</sup>), if $n$ $>$ 1
+
+T($n$) = $2$T($n/3$) + $O$($n$<sup>3</sup>)
+
+       = $2$($2$T($n/9$) + $n/3$) + $O$($n$<sup>6</sup>)
+       = $4$T($n/9$) + $O$($n$<sup>6</sup>)
+       ...
+       = 2<sup>$i$</sup>T(($n/3$(<sup>$i$</sup>)) + $O$($n$<sup>6</sup>)
+
+for $i$ = $lgn$
+
+       = $O$(
