@@ -34,17 +34,26 @@ might help with the notation for mathematical expressions.
 
 **Recurence Relation:**
 
-T($n$)= 
-- $1$, if $n$ $<=$ 1
--  $2$T($n/3$) + $O$($n$<sup>6</sup>), if $n$ $>$ 1
+$T(n)$ = $1$ if n $\leq$ 1 else $3T(\frac {n}{3}$) + n<sup>5</sup>
 
-T($n$) = $2$T($n/3$) + $O$($n$<sup>3</sup>)
+$T(n)$ = $3T(\frac {n}{3}$) + n<sup>5</sup>
 
-       = $2$($2$T($n/9$) + $n/3$) + $O$($n$<sup>6</sup>)
-       = $4$T($n/9$) + $O$($n$<sup>6</sup>)
-       ...
-       = 2<sup>$i$</sup>T(($n/3$(<sup>$i$</sup>)) + $O$($n$<sup>6</sup>)
+=  $3$($3T$(($\frac {n}{3}$)} / 3) + ($\frac{n}{3}$)<sup>5</sup>) + n<sup>5</sup>
 
-for $i$ = $lgn$
+=  $9T$($\frac{n}{9}$) + $\frac{3(n^5)}{3^5}$ + n<sup>5</sup>
 
-       = $O$(
+=  . . . 
+
+($\frac{9}{9^5}$ + $\frac{3}{3^5}$ + 1) $n$
+
+= 9($\frac{n}{9}$)<sup>5</sup>
+
+$\frac{3^j}{(3^j)^5}$
+
+for $i$ = $(log_3 n)$
+
+= 3<sup>$log_3n$</sup> T($\frac{n}{3^{(\log_3 n)}}$) + $\sum_{log_3 n-1}^{j=0}$ $\frac{3^j}{(3^j)^5}$ + n<sup>5</sup>
+
+= $\in$ $\theta$ $(n^5 (log_3 n))$
+
+
